@@ -124,6 +124,7 @@ type NodePool struct {
 	PriorityClassName         string                            `json:"priorityClassName,omitempty"`
 	Pdb                       *PdbConfig                        `json:"pdb,omitempty"`
 	Probes                    *ProbesConfig                     `json:"probes,omitempty"`
+	HostAliases               []corev1.HostAlias                `json:"hostAliases,omitempty"`
 }
 
 // PersistencConfig defines options for data persistence
