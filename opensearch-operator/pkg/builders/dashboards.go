@@ -142,7 +142,8 @@ func NewDashboardsDeploymentForCR(cr *opsterv1.OpenSearchCluster, volumes []core
 					Annotations: annotations,
 				},
 				Spec: corev1.PodSpec{
-					Volumes: volumes,
+					Volumes:     volumes,
+					HostAliases: cr.Spec.Dashboards.HostAliases,
 					Containers: []corev1.Container{
 						{
 							Name:            "dashboards",
